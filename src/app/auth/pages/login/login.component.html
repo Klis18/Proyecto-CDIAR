@@ -1,0 +1,46 @@
+<div class="grid grid-nogutter container-register">
+  <div class="col-12 md:col-6 lg:col-3">
+  </div>
+  <div class="col-12 md:col-6 lg:col-6 p-6">
+    <div class="card justify-content-center">
+      <p-card class="justify-content-center">
+        <div class="field text-center mb-5">
+          <img src="assets/logo.png" alt="logo" />
+        </div>
+  
+        <h3 class="text-center mb-5">Iniciar sesión</h3>
+        <div class="field text-center">
+          <input
+            id="correo"
+            type="text"
+            placeholder="Correo electrónico"
+            class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-9"
+          />
+        </div>
+        <div class="field text-center">
+          <p-password
+            id="password"
+            [feedback]="false"
+            placeholder="Contraseña"
+            styleClass="p-password p-component p-inputwrapper p-input-icon-right"
+            [style]="{ width: '75%' }"
+            [inputStyle]="{ width: '100%' }"
+            [toggleMask]="true"
+          ></p-password>
+        </div>
+        <div class="field text-center font-light">
+          <p-button label="Ingresar" [raised]="true"></p-button>
+        </div>
+        <div class="field text-center -mt-3 text-xs">
+          <p-button label="Recuperar Contraseña"  [link]="true" size="small"></p-button>
+        </div>
+        <p-divider></p-divider>
+        <div class="field text-center">
+          <p-button label="Crear cuenta" [raised]="true" severity="info"></p-button>
+        </div>
+      </p-card>
+    </div>
+  </div>
+  <div class="col-12 md:col-6 lg:col-3">
+  </div>
+</div>

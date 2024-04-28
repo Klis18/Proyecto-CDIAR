@@ -1,0 +1,25 @@
+<p-table [value]="recursos" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Acciones</th>
+            <th>Descripción</th>
+            <th>Asignatura</th>
+            <th>Nivel</th>
+            <th>Tipo Recurso</th>
+            <th>Fecha</th>
+            <th>Creado por</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-recurso>
+        <tr>
+            <td>Hola</td>
+            <td>{{ recurso.nombreRecurso }}</td>
+            <td>{{ recurso.asignatura }}</td>
+            <td>{{ recurso.nivel }}</td>
+            <td>{{ recurso.tipoRecurso }}</td>
+            <td>{{ recurso.fechaCreacion }}</td>
+            <td>{{ recurso.usuarioCreacion }}</td>
+        </tr>
+    </ng-template>
+</p-table>
+

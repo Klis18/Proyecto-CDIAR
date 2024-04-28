@@ -1,0 +1,65 @@
+<div class="grid grid-nogutter container-register">
+  <div class="col-2">
+  </div>
+  <div class="col-8 p-4">
+    <div class="card flex justify-content-center">
+      <p-card header="Crear Cuenta CDIAR" class="justify-content-center border-circle">
+        <div class="formgrid grid">
+
+          <div class="field col-12 md:col-6">
+              <label for="firstname6">Nombres</label>
+              <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+          </div>
+
+          <div class="field col-12 md:col-6">
+              <label for="lastname6">Apellidos</label>
+              <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+          </div>
+
+
+          <div class="field col-12">
+              <label for="address">Tipo Persona</label>
+              <select id="state" class="w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary" style="appearance: auto">
+                  <option>Estudiante</option>
+                  <option>Docente</option>
+              </select>              
+          </div>
+
+          <div class="field col-12 md:col-6">
+              <label for="city">Correo electrónico</label>
+              <input id="city" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+          </div>
+
+          <div class="field col-12 md:col-6">
+            <label for="city">Celular</label>
+            <input id="city" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+          </div>
+
+          <div class="field col-12 md:col-4 mr-5">
+            <label for="zip">Contraseña</label>
+            <p-password [(ngModel)]="value" [toggleMask]="true"></p-password>
+          </div>
+
+          <div class="field col-12 md:col-4">
+            <label for="zip">Confirmar contraseña</label>
+            <p-password [(ngModel)]="value" [toggleMask]="true"></p-password>
+          </div>
+
+          <div class="field col-12 md:col-4">
+            
+          </div>
+          <div class="field col-12 md:col-4 mt-4">
+            <p-button label="Registrar" class="mr-2"></p-button>
+            <p-button label="Cancelar" severity="secondary"></p-button>
+          </div>
+          <div class="field col-12 md:col-4">
+            
+          </div>
+          
+      </div>
+      </p-card>
+    </div>
+  </div>
+  <div class="col-2">
+  </div>
+</div>
