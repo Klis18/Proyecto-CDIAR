@@ -1,3 +1,8 @@
+export interface RespuestaRecurso {
+    statusCode: string;
+    message:    string;
+    data:       Recurso[];
+}
 export interface Recurso{
     idRecurso: number;
     nombreRecurso: string;
@@ -10,11 +15,6 @@ export interface Recurso{
 }
 
 
-// export interface Recurso {
-//     statusCode: string;
-//     message:    null;
-//     data:       Data[];
-// }
 
 // export interface Data {
 //     idRecurso:       number;

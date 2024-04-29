@@ -17,7 +17,7 @@
             <td>{{ recurso.asignatura }}</td>
             <td>{{ recurso.nivel }}</td>
             <td>{{ recurso.tipoRecurso }}</td>
-            <td>{{ recurso.fechaCreacion }}</td>
+            <td>{{ recurso.fechaCreacion | date:'mediumDate':'':'es-EC'}}</td>
             <td>{{ recurso.usuarioCreacion }}</td>
         </tr>
     </ng-template>

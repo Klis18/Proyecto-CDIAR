@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable} from 'rxjs';
-import { Recurso } from '../interfaces/recurso';
+import { Recurso, RespuestaRecurso } from '../interfaces/recurso';
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +13,8 @@ export class RecursosAcademicosService {
   
   constructor(private http: HttpClient) { }
 
-  getRecursos():Observable<Recurso[]>{
-    return this.http.get<Recurso[]>(`${this.baseUrl}recursos/obtener`);
+  getRecursos():Observable<RespuestaRecurso>{
+    return this.http.get<RespuestaRecurso>(`${this.baseUrl}recursos/obtener`);
   }
 
 }
