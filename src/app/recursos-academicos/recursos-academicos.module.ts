@@ -8,19 +8,23 @@ import { RepositorioRecursosComponent } from './pages/repositorio-recursos/repos
 import { HttpClientModule } from '@angular/common/http';
 
 import { ObjToArrayPipe } from './pipes/objToArray.pipe';
+import { FiltrosBusquedaComponent } from './components/filtros-busqueda/filtros-busqueda.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     TablaRecursosComponent,
     RepositorioRecursosComponent,
-    ObjToArrayPipe
+    ObjToArrayPipe,
+    FiltrosBusquedaComponent
   ],
   imports: [
     CommonModule,
     RecursosAcademicosRoutingModule,
     PrimeNgModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   exports:[
     TablaRecursosComponent,

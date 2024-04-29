@@ -7,6 +7,7 @@ import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { ChipsModule } from 'primeng/chips';
 import { DividerModule } from 'primeng/divider';
+import { DropdownModule } from 'primeng/dropdown';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { PasswordModule } from 'primeng/password';
 import { InputTextModule } from 'primeng/inputtext';
@@ -26,6 +27,7 @@ import { TagModule } from 'primeng/tag';
     CardModule,
     ChipsModule,
     DividerModule,
+    DropdownModule,
     PanelMenuModule,
     PasswordModule,
     TableModule,

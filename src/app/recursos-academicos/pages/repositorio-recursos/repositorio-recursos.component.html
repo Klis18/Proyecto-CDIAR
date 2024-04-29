@@ -1,4 +1,13 @@
+<div class="card flex">
+    <p-breadcrumb class="max-w-full" [model]="items" [home]="home"></p-breadcrumb>
+  </div>
 
-<h3>Recursos Académicos</h3>
-<hr>
-<tabla-recursos [recursos]="recursos | ObjToArray"></tabla-recursos>
+<div class="mr-5 ml-5">
+
+    <h1 class="font-light">Recursos Académicos</h1>
+
+    <p-divider></p-divider>
+    <filtros-busqueda></filtros-busqueda>
+    <tabla-recursos [recursos]="recursos | ObjToArray"></tabla-recursos> 
+
+</div>

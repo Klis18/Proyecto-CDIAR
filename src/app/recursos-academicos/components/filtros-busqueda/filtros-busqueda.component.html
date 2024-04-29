@@ -1,0 +1,9 @@
+
+<div class="card flex justify-content-left mt-5 mb-4">
+    <span class="p-input-icon-left mb-3 mr-4">
+        <i class="pi pi-search"></i>
+        <input type="text" pInputText [(ngModel)]="value" placeholder="Descripción"/>
+    </span>
+    <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" [showClear]="true" placeholder="Nivel" class="mr-4"></p-dropdown>
+    <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" [showClear]="true" placeholder="Asignatura"></p-dropdown>
+</div>
