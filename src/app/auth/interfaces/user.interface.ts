@@ -5,7 +5,7 @@ export interface User {
   email:    string;
   password:     string;
   phoneNumber: string;
-  role:    string;
+  roleId:    string;
     // isActive: boolean;
     // roles:    string[];
 }

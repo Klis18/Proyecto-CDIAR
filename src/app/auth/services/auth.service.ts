@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable, computed, inject, signal } from '@angular/core';
 import { Observable, map, catchError, throwError, of } from 'rxjs';
 import { User, AuthStatus, LoginResponse, CheckTokenResponse } from '../interfaces';
+import { RespuestaRol } from '../interfaces/role';
 
 @Injectable({
   providedIn: 'root'
@@ -78,6 +79,11 @@ export class AuthService {
   }
 
   registrarUsuario( user: User ): Observable<User> {
-    return this.http.post<User>(`${ this.baseUrl }/usuario/crear`, user);
+    return this.http.post<User>(`${ this.baseUrl }usuario/crear`, user);
   }
+
+  obtenerRoles(): Observable<RespuestaRol> {
+    return this.http.get<RespuestaRol>(`${ this.baseUrl }usuario/obtenerRoles`);
+  }
+  
 }
