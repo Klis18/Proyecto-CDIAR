@@ -1,2 +1,14 @@
+
+<!-- <shared-sidebar></shared-sidebar>
 <router-outlet></router-outlet>
-<shared-footer></shared-footer>
+<shared-footer></shared-footer>  -->
+
+  
+
+
+<h1 *ngIf="!finishedAuthCheck()">
+  Loading
+</h1>
+
+
+<router-outlet *ngIf="finishedAuthCheck()" />

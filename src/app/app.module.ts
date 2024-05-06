@@ -10,6 +10,7 @@ import { RecursosAcademicosModule } from './recursos-academicos/recursos-academi
 import localeEsEC from '@angular/common/locales/es-EC';
 
 import { registerLocaleData } from '@angular/common';
+import { AuthModule } from './auth/auth.module';
 
 registerLocaleData(localeEsEC);
 
@@ -22,7 +23,8 @@ registerLocaleData(localeEsEC);
     BrowserAnimationsModule,
     AppRoutingModule,
     SharedModule,
-    RecursosAcademicosModule
+    RecursosAcademicosModule,
+    AuthModule
   ],
   providers: [
     {

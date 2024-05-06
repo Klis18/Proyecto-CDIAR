@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ObjToArrayPipe } from './pipes/objToArray.pipe';
 import { FiltrosBusquedaComponent } from './components/filtros-busqueda/filtros-busqueda.component';
 import { FormsModule } from '@angular/forms';
+import { NuevoRecursoComponent } from './pages/nuevo-recurso/nuevo-recurso.component';
+import { FormNuevoRecursoComponent } from './components/form-nuevo-recurso/form-nuevo-recurso.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { FormsModule } from '@angular/forms';
     TablaRecursosComponent,
     RepositorioRecursosComponent,
     ObjToArrayPipe,
-    FiltrosBusquedaComponent
+    FiltrosBusquedaComponent,
+    NuevoRecursoComponent,
+    FormNuevoRecursoComponent
   ],
   imports: [
     CommonModule,

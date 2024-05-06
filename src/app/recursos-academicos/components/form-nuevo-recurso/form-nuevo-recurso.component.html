@@ -1,0 +1,22 @@
+<div class="card flex mt-3 mb-3 w-full">
+    <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" [showClear]="true" placeholder="Nivel" class="mr-4"></p-dropdown>
+    <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" [showClear]="true" placeholder="Asignatura" class="mr-4"></p-dropdown>
+    <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" [showClear]="true" placeholder="Estado" class="mr-4"></p-dropdown>
+</div>
+
+<div class="card flex mt-3 mb-3 w-full">
+    <input type="text" pInputText [(ngModel)]="value" placeholder="Título" class="w-full"/>
+</div>
+<div class="card flex mt-3 mb-3">
+    <p-toast></p-toast>
+    <p-fileUpload name="demo[]" url="https://www.primefaces.org/cdn/api/upload.php" (onUpload)="onUpload($any($event))" [multiple]="true" accept="image/*" maxFileSize="1000000" class="w-full">
+        <ng-template pTemplate="content">
+            <ul *ngIf="uploadedFiles.length">
+                <li *ngFor="let file of uploadedFiles">{{ file.name }} - {{ file.size }} bytes</li>
+            </ul>
+        </ng-template>
+    </p-fileUpload>
+</div>
+<div class="justify-content-center">
+    <p-button label="Guardar" icon="pi pi-save" styleClass="bg-blue-800 border-transparent"></p-button>
+</div>
