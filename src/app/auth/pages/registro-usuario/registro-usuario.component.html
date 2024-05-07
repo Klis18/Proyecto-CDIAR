@@ -4,11 +4,12 @@
   <div class="col-8 p-4">
     <div class="card justify-content-center pt-5 pb-5">
       <p-card header="Crear Cuenta CDIAR" class="justify-content-center border-circle">
-          <form [formGroup]="userGroup" class="formgrid grid mt-5" (ngSubmit)="onSubmit()">
-          
-            <div class="field col-12 md:col-8">
-              <label for="username">Nombre Completo</label>
-              <input id="username" type="text" formControlName="username" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full h-3rem">
+        <form [formGroup]="userGroup" class="formgrid grid mt-5" (ngSubmit)="onSubmit()">
+
+          <div class="field col-12 md:col-8">
+            <label for="username">Nombre Completo</label>
+            <input id="username" type="text" formControlName="username"
+              class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full h-3rem">
           </div>
 
           <!-- <div class="field col-12 md:col-4">
@@ -16,42 +17,42 @@
               <input id="lastname6" type="text" formControlName="apellidos" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full h-3rem">
           </div> -->
           <div class="field col-12 md:col-4">
-            <label for="role">Tipo Usuario</label>
-            <p-dropdown 
-            formControlName="role"
-            [options]="userTypes"
-            optionLabel="descripcion"
-            placeholder="Tipo Usuario" />
+            <label for="rolId">Tipo Usuario</label>
+            <p-dropdown formControlName="rolId" [options]="userTypes" optionLabel="label" optionValue="value"
+              placeholder="Tipo Usuario"></p-dropdown>
           </div>
 
           <div class="field col-12 md:col-8">
-              <label for="email">Correo electrónico</label>
-              <input id="city" type="text" formControlName="email" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full h-3rem">
+            <label for="email">Correo electrónico</label>
+            <input id="city" type="text" formControlName="email"
+              class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full h-3rem">
           </div>
 
           <div class="field col-12 md:col-4">
             <label for="phone">Celular</label>
-            <input id="phone" type="text" formControlName="phoneNumber" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full h-3rem">
+            <input id="phone" type="text" formControlName="phoneNumber"
+              class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full h-3rem">
           </div>
 
           <div class="field col-12 md:col-5">
             <label for="zip">Contraseña</label>
-            <p-password  [toggleMask]="true" class="w-5rem" formControlName="password"></p-password>
+            <p-password [toggleMask]="true" class="w-5rem" formControlName="password"></p-password>
           </div>
 
           <div class="field col-12 md:col-5">
             <label for="zip">Confirmar contraseña</label>
             <p-password [toggleMask]="true"></p-password>
           </div>
-          </form>
+        </form>
 
-          <div class="field col-12  mt-4 text-center">
-            <p-button label="Registrar" class="mr-2" styleClass="bg-blue-800 border-transparent" (click)="onSubmit()"></p-button>
-            <p-button label="Cancelar" severity="secondary" routerLink="/auth/login"></p-button>
-          </div>
-          
+        <div class="field col-12  mt-4 text-center">
+          <p-button label="Registrar" class="mr-2" styleClass="bg-blue-800 border-transparent"
+            (click)="onSubmit()"></p-button>
+          <p-button label="Cancelar" severity="secondary" routerLink="/auth/login"></p-button>
+        </div>
+
       </p-card>
-  </div>
+    </div>
   </div>
   <div class="col-2">
   </div>
