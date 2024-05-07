@@ -3,6 +3,7 @@ import { Injectable, computed, inject, signal } from '@angular/core';
 import { Observable, map, catchError, throwError, of } from 'rxjs';
 import { User, AuthStatus, LoginResponse, CheckTokenResponse } from '../interfaces';
 import { RespuestaRol } from '../interfaces/role';
+import { EmailVerification } from '../interfaces/email-verification';
 
 @Injectable({
   providedIn: 'root'
@@ -84,6 +85,10 @@ export class AuthService {
 
   obtenerRoles(): Observable<RespuestaRol> {
     return this.http.get<RespuestaRol>(`${ this.baseUrl }usuario/obtenerRoles`);
+  }
+
+  verifyUser(verification : EmailVerification): Observable<EmailVerification> {
+    return this.http.post<EmailVerification>(`${ this.baseUrl }login/verifyuser`, verification);
   }
   
 }

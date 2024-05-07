@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { EmailValidator, FormControl, FormGroup } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
+import { EmailVerification } from '../../interfaces/email-verification';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-verify-user',
@@ -23,18 +27,38 @@ import { FormControl, FormGroup } from '@angular/forms';
             box-shadow: none;
             border-bottom-color: var(--primary-color);
         } 
-    `
+    `,
 })
 export class VerifyUserComponent {
-  value:any;
+  value: any;
 
   public userGroup = new FormGroup({
     email: new FormControl<string>(''),
     token: new FormControl<string>(''),
   });
 
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
+
+  ngOnInit(): void {
+    this.route.queryParams.subscribe((params) => {
+      const email = params['email'];
+      this.userGroup.get('email')?.setValue(email);
+    });
+  }
+
+  get emailVerification(): EmailVerification {
+    return this.userGroup.value as EmailVerification;
+  }
 
   onSubmit() {
-    
+    if (this.userGroup.invalid) return;
+
+    this.authService.verifyUser(this.emailVerification).subscribe((email) => {
+      this.router.navigate(['/auth/login']);
+    });
   }
 }

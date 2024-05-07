@@ -39,7 +39,6 @@ export class RegistroUsuarioComponent {
 
     ngOnInit() {
       this.authService.obtenerRoles().subscribe((respuesta: RespuestaRol) => {
-        console.log(respuesta);
         this.userTypes = respuesta.data.map(role => ({
           label: role.rolName,
           value: role.rolId
@@ -57,17 +56,15 @@ export class RegistroUsuarioComponent {
 
     onSubmit() {
       if ( this.userGroup.invalid ) return;
-      console.log(this.currentUser);
 
       if (this.userGroup.value.username) {
-        this.userGroup.value.username = this.userGroup.value.username.replace(/\s/g, '');
+      this.userGroup.value.username = this.userGroup.value.username.replace(/\s/g, '');
       }
       
       this.authService.registrarUsuario(this.currentUser)
-        .subscribe(user => {
-            this.router.navigate(['/auth/verify']);
-            console.log(user);
-          }
-        );
+      .subscribe(user => {
+        this.router.navigate(['/auth/verify'], { queryParams: { email: this.userGroup.value.email } });
+        }
+      );
     }
 }
