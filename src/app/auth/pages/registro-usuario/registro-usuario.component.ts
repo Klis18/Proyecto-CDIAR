@@ -65,7 +65,7 @@ export class RegistroUsuarioComponent {
       
       this.authService.registrarUsuario(this.currentUser)
         .subscribe(user => {
-            this.router.navigate(['/auth/login']);
+            this.router.navigate(['/auth/verify']);
             console.log(user);
           }
         );

@@ -20,6 +20,7 @@ import { RatingModule } from 'primeng/rating';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { SidebarModule } from 'primeng/sidebar';
 import { TagModule } from 'primeng/tag';
+import { InputOtpModule } from 'primeng/inputotp';
 
 @NgModule({
   declarations: [],
@@ -45,7 +46,8 @@ import { TagModule } from 'primeng/tag';
     SelectButtonModule,
     SidebarModule,
     TagModule,
-    InputTextModule
+    InputTextModule,
+    InputOtpModule
   ]
 })
 export class PrimeNgModule { }

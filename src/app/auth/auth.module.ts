@@ -8,12 +8,15 @@ import { RegistroUsuarioComponent } from './pages/registro-usuario/registro-usua
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
 import { SharedModule } from '../shared/shared.module';
+import { VerifyUserComponent } from './pages/verify-user/verify-user.component';
+;
 
 @NgModule({
   declarations: [
     LoginComponent,
     RegistroUsuarioComponent,
-    AuthLayoutComponent
+    AuthLayoutComponent,
+    VerifyUserComponent
   ],
   imports: [
     CommonModule,

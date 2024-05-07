@@ -1,0 +1,44 @@
+<div class="grid grid-nogutter">
+    <div class="col-4">
+    </div>
+    <div class="col-4 p-5">
+      <div class="card justify-content-center pt-5 pb-5">
+        <p-card header="Verificar cuenta" class="justify-content-center border-circle">
+          <form [formGroup]="userGroup" class="formgrid grid mt-5" (ngSubmit)="onSubmit()">
+  
+            <div class="field col-12 ">
+              <label for="email">Correo electrónico</label>
+              <input id="city" type="text" formControlName="email"
+                class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full h-3rem">
+            </div>
+  
+            <div class="field col-12 text-center">
+                <p-inputOtp formControlName="token">
+                    <ng-template pTemplate="input" let-token let-events="events">
+                        <input 
+                            pInputText
+                            class="custom-otp-input" 
+                            (input)="events.input($event)" 
+                            (keydown)="events.keydown($event)" 
+                            type="text" 
+                            [attr.value]="token" 
+                            [maxLength]="1" />
+                    </ng-template>
+                </p-inputOtp>
+            </div>
+  
+           
+          </form>
+  
+          <div class="field col-12  mt-4 text-center">
+            <p-button label="Verificar" class="mr-2" styleClass="bg-blue-800 border-transparent"
+              (click)="onSubmit()"></p-button>
+            <p-button label="Cancelar" severity="secondary" routerLink="/auth/login"></p-button>
+          </div>
+  
+        </p-card>
+      </div>
+    </div>
+    <div class="col-4">
+    </div>
+  </div>
